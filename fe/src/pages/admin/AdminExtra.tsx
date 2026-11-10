@@ -1,7 +1,7 @@
 import { useMemo, useState, type FormEvent, type ReactNode } from 'react'
-import { Modal } from '../components/Modal'
-import './AdminDashboard.css'
-import './AdminExtra.css'
+import { Modal } from '../../components/Modal'
+import '../../css/AdminDashboard.css'
+import '../../css/AdminExtra.css'
 
 type ExtraKind = 'promotions' | 'inventory' | 'reviews' | 'settings'
 type NavRow = [string, string, string]

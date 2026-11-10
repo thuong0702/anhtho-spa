@@ -1,5 +1,5 @@
 import { Icon } from './Icon'
-import './Footer.css'
+import '../css/Footer.css'
 
 type FooterProps = {
   address?: string

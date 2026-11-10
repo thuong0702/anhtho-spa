@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import { Footer } from '../components/Footer'
-import { Icon } from '../components/Icon'
-import { Navbar, type SiteLanguage } from '../components/Navbar'
-import '../App.css'
+import { Footer } from '../../components/Footer'
+import { Icon } from '../../components/Icon'
+import { Navbar, type SiteLanguage } from '../../components/Navbar'
+import '../../css/App.css'
 import { products, type Product } from './Products'
-import './ProductDetail.css'
+import '../../css/ProductDetail.css'
 
 type DetailCopy = {
   description: Record<SiteLanguage, string>

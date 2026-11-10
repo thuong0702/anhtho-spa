@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
-import '../App.css'
-import { Footer } from '../components/Footer'
-import { Icon } from '../components/Icon'
-import { Navbar, type SiteLanguage } from '../components/Navbar'
+import '../../css/App.css'
+import { Footer } from '../../components/Footer'
+import { Icon } from '../../components/Icon'
+import { Navbar, type SiteLanguage } from '../../components/Navbar'
 import { products } from './Products'
-import './Cart.css'
+import '../../css/Cart.css'
 
 type CartMap = Record<string, number>
 

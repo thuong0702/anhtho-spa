@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
-import '../App.css'
-import { Footer } from '../components/Footer'
-import { Icon } from '../components/Icon'
-import { Modal } from '../components/Modal'
-import { Navbar, type SiteLanguage } from '../components/Navbar'
-import './Products.css'
+import '../../css/App.css'
+import { Footer } from '../../components/Footer'
+import { Icon } from '../../components/Icon'
+import { Modal } from '../../components/Modal'
+import { Navbar, type SiteLanguage } from '../../components/Navbar'
+import '../../css/Products.css'
 
 export type ProductCategory = 'face' | 'body' | 'hair' | 'wellness' | 'gift'
 export type Product = {

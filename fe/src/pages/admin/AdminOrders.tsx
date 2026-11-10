@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react'
-import { Icon } from '../components/Icon'
-import { Modal } from '../components/Modal'
-import './AdminDashboard.css'
-import './AdminOrders.css'
+import { Icon } from '../../components/Icon'
+import { Modal } from '../../components/Modal'
+import '../../css/AdminDashboard.css'
+import '../../css/AdminOrders.css'
 
 type OrderStatus = 'Chờ xác nhận' | 'Đang giao' | 'Đã giao' | 'Đã hủy'
 type Order = { id: string; customer: string; phone: string; items: { name: string; quantity: number; price: number; image: string }[]; total: number; payment: string; status: OrderStatus; date: string; address: string }

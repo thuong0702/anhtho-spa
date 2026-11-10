@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react'
-import { Icon } from '../components/Icon'
-import { Modal } from '../components/Modal'
-import './AdminDashboard.css'
-import './AdminBookings.css'
+import { Icon } from '../../components/Icon'
+import { Modal } from '../../components/Modal'
+import '../../css/AdminDashboard.css'
+import '../../css/AdminBookings.css'
 
 type BookingStatus = 'Chờ xác nhận' | 'Đã xác nhận' | 'Đã đến' | 'Đã hủy'
 type Appointment = { id: string; name: string; phone: string; service: string; date: string; time: string; status: BookingStatus; note?: string }

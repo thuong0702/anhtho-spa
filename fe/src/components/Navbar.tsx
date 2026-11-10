@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { Icon } from './Icon'
-import './Navbar.css'
+import '../css/Navbar.css'
 
 export type SiteLanguage = 'vi' | 'en'
 

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import '../App.css'
-import { Footer } from '../components/Footer'
-import { Icon } from '../components/Icon'
-import { Navbar, type SiteLanguage } from '../components/Navbar'
-import './Services.css'
+import '../../css/App.css'
+import { Footer } from '../../components/Footer'
+import { Icon } from '../../components/Icon'
+import { Navbar, type SiteLanguage } from '../../components/Navbar'
+import '../../css/Services.css'
 
 type Treatment = {
   id: string

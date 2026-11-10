@@ -1,8 +1,8 @@
 import { useMemo, useState, type FormEvent } from 'react'
-import { Icon } from '../components/Icon'
-import { Modal } from '../components/Modal'
-import './AdminDashboard.css'
-import './AdminUsers.css'
+import { Icon } from '../../components/Icon'
+import { Modal } from '../../components/Modal'
+import '../../css/AdminDashboard.css'
+import '../../css/AdminUsers.css'
 
 type AccountRole = 'Khách hàng' | 'Nhân viên' | 'Quản trị viên'
 type AccountStatus = 'Hoạt động' | 'Đã khóa'

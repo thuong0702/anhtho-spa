@@ -1,9 +1,9 @@
 import { useMemo, useState, type FormEvent } from 'react'
-import { Icon } from '../components/Icon'
-import { Modal } from '../components/Modal'
-import { products as shopProducts, type ProductCategory } from './Products'
-import './AdminDashboard.css'
-import './AdminProducts.css'
+import { Icon } from '../../components/Icon'
+import { Modal } from '../../components/Modal'
+import { products as shopProducts, type ProductCategory } from '../user/Products'
+import '../../css/AdminDashboard.css'
+import '../../css/AdminProducts.css'
 
 type ProductStatus = 'Đang bán' | 'Sắp hết hàng' | 'Ngừng kinh doanh'
 type ManagedProduct = Product & { stock: number; status: ProductStatus; created: string }
