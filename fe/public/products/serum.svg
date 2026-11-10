@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 540" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="22" y1="20" x2="420" y2="520" gradientUnits="userSpaceOnUse"><stop stop-color="#F9E9E5"/><stop offset="1" stop-color="#E8CFC4"/></linearGradient>
+    <linearGradient id="glass" x1="150" y1="170" x2="300" y2="430" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF9F1"/><stop offset=".5" stop-color="#E8BDB3"/><stop offset="1" stop-color="#D99591"/></linearGradient>
+    <linearGradient id="gold" x1="190" y1="100" x2="250" y2="170" gradientUnits="userSpaceOnUse"><stop stop-color="#F6E3B2"/><stop offset="1" stop-color="#C7985A"/></linearGradient>
+    <filter id="shadow" x="90" y="130" width="260" height="360" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="17"/></filter>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h440v540H0z"/>
+  <circle cx="70" cy="90" r="49" fill="#FFF8EF" fill-opacity=".46"/><circle cx="380" cy="455" r="86" fill="#FFF8EF" fill-opacity=".38"/>
+  <path d="M24 399c53-60 84-67 118-41M38 425c41-42 73-47 104-31M349 92c-40 35-53 72-48 108M371 108c-27 33-38 61-36 88" stroke="#B78C78" stroke-opacity=".34" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="219" cy="440" rx="105" ry="25" fill="#6C433B" fill-opacity=".22" filter="url(#shadow)"/>
+  <rect x="181" y="117" width="78" height="54" rx="13" fill="url(#gold)"/><rect x="196" y="83" width="48" height="41" rx="8" fill="#E9D5BB"/><path d="M210 76h20v12h-20z" fill="#AF875C"/>
+  <rect x="135" y="160" width="170" height="273" rx="35" fill="url(#glass)" stroke="#FFF9F2" stroke-width="7"/>
+  <path d="M153 187c0-8 7-15 15-15h12v232h-12c-8 0-15-7-15-15V187Z" fill="#FFF" fill-opacity=".3"/>
+  <path d="M172 258h96" stroke="#B98A68" stroke-opacity=".6"/>
+  <text x="220" y="235" fill="#855B4B" font-family="Georgia,serif" font-size="14" letter-spacing="4" text-anchor="middle">ANH THƠ</text>
+  <text x="220" y="288" fill="#70463F" font-family="Georgia,serif" font-size="18" text-anchor="middle">SERUM</text>
+  <text x="220" y="313" fill="#8D6C5A" font-family="Georgia,serif" font-size="10" letter-spacing="1" text-anchor="middle">HYDRATING GLOW</text>
+  <path d="M220 335c-12-20-32-3-20 11 8 10 20 17 20 17s12-7 20-17c12-14-8-31-20-11Z" fill="#C98280" fill-opacity=".7"/>
+  <text x="220" y="398" fill="#906B59" font-family="Georgia,serif" font-size="10" letter-spacing="2" text-anchor="middle">30 ml</text>
+</svg>

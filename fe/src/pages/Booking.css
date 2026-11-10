@@ -1,0 +1,59 @@
+.booking-hero{position:relative;display:flex;min-height:250px;align-items:center;overflow:hidden;background:#f4e4df}
+.booking-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;opacity:.72}
+.booking-hero::after{position:absolute;inset:0;background:linear-gradient(90deg,rgb(255 248 244 / 94%),rgb(255 248 244 / 72%) 44%,rgb(255 248 244 / 8%) 100%);content:''}
+.booking-hero>div{position:relative;z-index:1;width:min(520px,60%);margin-left:clamp(24px,5vw,70px);padding:28px 0}
+.booking-script{margin:0 0 3px;color:#bd797c;font:italic 23px Georgia,'Times New Roman',serif}
+.booking-hero h1{margin:0;color:#582a32;font:400 clamp(32px,3.7vw,48px)/1.08 Georgia,'Times New Roman',serif}
+.booking-hero>div>p:last-child{max-width:440px;margin:12px 0 0;color:#775f59;font:14px/1.55 Georgia,'Times New Roman',serif}
+.booking-page-layout{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(340px,.96fr);align-items:start;gap:22px;padding:24px clamp(16px,4vw,56px) 52px;background:#f0eae1}
+.booking-page-main{display:flex;min-width:0;flex-direction:column;gap:20px}
+.booking-step-panel,.booking-selected-panel{padding:18px;background:#fffbed}
+.booking-step-panel h2{display:flex;align-items:center;gap:9px;margin:0 0 14px;color:#b87879;font:600 19px Georgia,'Times New Roman',serif}
+.booking-step-panel h2>span{display:grid;width:27px;height:27px;place-items:center;border-radius:50%;color:#fff;background:#f0a6b0;font:16px Georgia,'Times New Roman',serif}
+.booking-calendar{width:min(100%,390px);margin:0 auto;padding:9px 10px 12px;border:1px solid #eadbd5;background:#fffafa;box-shadow:0 3px 7px rgb(89 55 45 / 9%)}
+.calendar-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;color:#63463d}
+.calendar-heading strong{font:600 13px Georgia,'Times New Roman',serif;text-transform:capitalize}
+.calendar-heading button{width:26px;height:26px;border:0;color:#bd797c;background:transparent;font-size:24px;line-height:1;cursor:pointer}.calendar-heading button:disabled{opacity:.3;cursor:default}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;justify-items:center}
+.calendar-weekday{display:grid;width:100%;height:24px;place-items:center;color:#7d6b65;font-size:10px;font-weight:700}
+.calendar-empty{width:30px;height:30px}
+.calendar-grid button{display:grid;width:30px;height:30px;place-items:center;padding:0;border:0;border-radius:50%;color:#473c38;background:transparent;font-size:11px;cursor:pointer;transition:color .18s,background .18s,transform .18s}
+.calendar-grid button:hover:not(:disabled){color:#fff;background:#d98f9c;transform:scale(1.08)}
+.calendar-grid button.selected{color:#fff;background:#d36c87;box-shadow:0 3px 9px rgb(186 91 119 / 24%)}
+.calendar-grid button:disabled{color:#c7c0bb;cursor:default}
+.booking-step-panel h3{margin:15px 0 8px;color:#bd797c;font:600 16px Georgia,'Times New Roman',serif}
+.booking-time-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.booking-time-grid button{min-height:32px;border:1px solid #efdade;border-radius:999px;color:#9b6870;background:#fffafa;font:11px Georgia,'Times New Roman',serif;cursor:pointer;transition:background .18s,color .18s,border-color .18s}
+.booking-time-grid button:hover{border-color:#d78394}.booking-time-grid button.selected{border-color:#cf7088;color:white;background:#cf7088}
+.booking-time-grid>p{grid-column:1/-1;margin:0;color:#806960;font-size:12px}
+.booking-service-step select,.booking-contact-step>input{width:100%;min-height:42px;padding:9px 12px;border:1px solid #efdeda;border-radius:6px;outline-color:#c9858d;color:#65453e;background:#fffafa;font:13px var(--sans)}
+.booking-service-step select:invalid{color:#9d8b83}
+.booking-contact-step{display:flex;flex-direction:column;gap:10px}
+.booking-contact-step h2{margin-bottom:6px}
+.booking-contact-step>input::placeholder{color:#a98d85}
+.booking-page-submit{min-height:42px;margin-top:5px;border:0;border-radius:999px;color:#fff;background:#bd797c;font:600 14px Georgia,'Times New Roman',serif;cursor:pointer;transition:background .2s,transform .2s}
+.booking-page-submit:hover:not(:disabled){background:#a75f63;transform:translateY(-1px)}.booking-page-submit:disabled{opacity:.65;cursor:wait}
+.booking-page-message{margin:0;padding:10px 12px;border-radius:6px;font-size:12px;line-height:1.5}.booking-page-message.success{color:#38654b;background:#e7f3e9}.booking-page-message.error{color:#943d45;background:#fae7e7}
+.booking-privacy{display:flex;align-items:center;gap:8px;margin:0;color:#8e6868;font-size:11px}.booking-privacy span{color:#d46f87;font-size:18px}
+.booking-page-aside{display:flex;min-width:0;flex-direction:column;gap:18px}
+.booking-selected-panel{padding:18px}
+.booking-selected-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.booking-selected-heading h2{margin:0;color:#bd797c;font:600 19px Georgia,'Times New Roman',serif}
+.booking-selected-heading a{color:#b32a47;font:11px Georgia,'Times New Roman',serif;text-decoration:none;white-space:nowrap}
+.booking-selected-heading a:hover{text-decoration:underline;text-underline-offset:3px}
+.booking-selected-card{display:flex;align-items:center;gap:14px;padding:12px;background:linear-gradient(110deg,#f9eeeb,#fff9f5)}
+.booking-selected-card img{width:92px;height:78px;flex:none;border-radius:7px;object-fit:cover}
+.booking-selected-card h3{margin:0 0 6px;color:#81585a;font:600 14px Georgia,'Times New Roman',serif}
+.booking-selected-card p{margin:0 0 5px;color:#82766f;font-size:11px}.booking-selected-card strong{color:#d26381;font:600 15px Georgia,'Times New Roman',serif}
+.booking-select-prompt{margin:0;padding:20px 12px;color:#927d73;background:#faf2ee;font:13px/1.45 Georgia,'Times New Roman',serif;text-align:center}
+.booking-summary-date{display:flex;flex-direction:column;gap:4px;margin-top:12px;padding-top:10px;border-top:1px solid #eee2d8;color:#8a7368;font-size:11px}
+.booking-summary-date strong{color:#674940;font:13px Georgia,'Times New Roman',serif}
+.booking-benefits{display:flex;flex-direction:column;gap:0;padding:14px 18px;background:linear-gradient(110deg,#fff7f1,#f9eeeb);box-shadow:0 3px 8px rgb(90 57 44 / 8%)}
+.booking-benefits article{display:flex;align-items:center;gap:14px;padding:11px 0;border-bottom:1px solid rgb(218 186 173 / 35%)}
+.booking-benefits article:last-child{border-bottom:0}
+.booking-benefits article>span{display:grid;width:40px;height:40px;flex:none;place-items:center;border-radius:50%;color:#d66e87;background:#fbe1e2;font-size:22px}
+.booking-benefits h3{margin:0 0 3px;color:#81585a;font:600 13px Georgia,'Times New Roman',serif}.booking-benefits p{margin:0;color:#8c7a73;font-size:11px}
+.booking-trust{padding:17px 20px;border-radius:12px;color:#8d1836;background:#f3dedd}
+.booking-trust strong{font:600 18px Georgia,'Times New Roman',serif}.booking-trust p{margin:6px 0 0;color:#7b5651;font:12px/1.5 Georgia,'Times New Roman',serif}
+@media(max-width:850px){.booking-page-layout{grid-template-columns:1fr}.booking-page-aside{display:grid;grid-template-columns:1fr 1fr;align-items:start}.booking-trust{grid-column:1/-1}}
+@media(max-width:600px){.booking-hero{min-height:210px}.booking-hero>div{width:80%;margin-left:18px}.booking-hero h1{font-size:31px}.booking-hero>div>p:last-child{font-size:12px}.booking-page-layout{gap:14px;padding:16px 12px 34px}.booking-step-panel,.booking-selected-panel{padding:14px}.booking-page-aside{display:flex}.booking-calendar{padding:8px}.calendar-grid button,.calendar-empty{width:29px;height:29px}.booking-time-grid{gap:6px}.booking-time-grid button{min-height:34px}.booking-selected-heading h2{font-size:17px}}

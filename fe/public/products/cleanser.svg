@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 540" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="440" y2="540" gradientUnits="userSpaceOnUse"><stop stop-color="#E9F0E6"/><stop offset="1" stop-color="#D0DFD0"/></linearGradient>
+    <linearGradient id="bottle" x1="142" y1="158" x2="294" y2="430" gradientUnits="userSpaceOnUse"><stop stop-color="#FBFFF9"/><stop offset="1" stop-color="#C8D9C7"/></linearGradient>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h440v540H0z"/><circle cx="74" cy="108" r="57" fill="#FFF" fill-opacity=".4"/><circle cx="364" cy="442" r="82" fill="#FFF" fill-opacity=".34"/>
+  <path d="M45 412c37-55 76-70 119-52M58 437c35-34 66-45 101-39M370 73c-35 39-48 73-42 109" stroke="#7F9C7D" stroke-opacity=".4" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="220" cy="444" rx="94" ry="21" fill="#425B43" fill-opacity=".18"/>
+  <rect x="185" y="115" width="70" height="77" rx="13" fill="#E6E0D1"/><path d="M198 99h44v25h-44z" fill="#8FA98C"/><path d="M207 84h26v17h-26z" fill="#6D896D"/>
+  <rect x="144" y="174" width="152" height="257" rx="34" fill="url(#bottle)" stroke="#F7FFF5" stroke-width="7"/>
+  <path d="M161 201c0-8 7-15 15-15h10v223h-10c-8 0-15-7-15-15V201Z" fill="#FFF" fill-opacity=".45"/>
+  <text x="220" y="268" fill="#527050" font-family="Georgia,serif" font-size="14" letter-spacing="4" text-anchor="middle">ANH THƠ</text>
+  <text x="220" y="316" fill="#486648" font-family="Georgia,serif" font-size="18" text-anchor="middle">GENTLE</text>
+  <text x="220" y="341" fill="#688267" font-family="Georgia,serif" font-size="10" letter-spacing="1" text-anchor="middle">FACE CLEANSER</text>
+  <path d="M220 362c-10-16-26-2-16 10 7 8 16 14 16 14s9-6 16-14c10-12-6-26-16-10Z" fill="#89A889" fill-opacity=".72"/>
+</svg>
