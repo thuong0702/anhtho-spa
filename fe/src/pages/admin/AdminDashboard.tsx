@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Icon } from '../components/Icon'
-import './AdminDashboard.css'
+import { Icon } from '../../components/Icon'
+import '../../css/AdminDashboard.css'
 
 const stats = [
   { icon: '₫', label: 'Tổng doanh thu', value: '15.680.000đ', trend: '18%', note: 'so với tháng trước', tone: 'pink' },

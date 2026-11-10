@@ -1,8 +1,8 @@
 import { useEffect, useState, type FormEvent } from 'react'
-import { Footer } from '../components/Footer'
-import { Icon } from '../components/Icon'
-import { Navbar, type SiteLanguage } from '../components/Navbar'
-import './Login.css'
+import { Footer } from '../../components/Footer'
+import { Icon } from '../../components/Icon'
+import { Navbar, type SiteLanguage } from '../../components/Navbar'
+import '../../css/Login.css'
 
 export default function Register() {
   const [language, setLanguage] = useState<SiteLanguage>('vi')

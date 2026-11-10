@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import '../App.css'
-import { Footer } from '../components/Footer'
-import { Icon } from '../components/Icon'
-import { Navbar, type SiteLanguage } from '../components/Navbar'
-import './About.css'
+import '../../css/App.css'
+import { Footer } from '../../components/Footer'
+import { Icon } from '../../components/Icon'
+import { Navbar, type SiteLanguage } from '../../components/Navbar'
+import '../../css/About.css'
 
 const values = [
   {

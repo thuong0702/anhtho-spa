@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState, type FormEvent } from 'react'
-import { Footer } from '../components/Footer'
-import { Icon } from '../components/Icon'
-import { Navbar, type SiteLanguage } from '../components/Navbar'
-import './Booking.css'
+import { Footer } from '../../components/Footer'
+import { Icon } from '../../components/Icon'
+import { Navbar, type SiteLanguage } from '../../components/Navbar'
+import '../../css/Booking.css'
 
 const services = [
   { id: 'facial', name: { vi: 'Massage mặt', en: 'Facial massage' }, duration: 60, price: 680000, image: '/home/service-facial.png' },

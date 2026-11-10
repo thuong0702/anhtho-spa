@@ -1,10 +1,10 @@
 import { useMemo, useState, type FormEvent } from 'react'
-import '../App.css'
-import { Footer } from '../components/Footer'
-import { Icon } from '../components/Icon'
-import { Navbar, type SiteLanguage } from '../components/Navbar'
+import '../../css/App.css'
+import { Footer } from '../../components/Footer'
+import { Icon } from '../../components/Icon'
+import { Navbar, type SiteLanguage } from '../../components/Navbar'
 import { products } from './Products'
-import './Checkout.css'
+import '../../css/Checkout.css'
 
 type CartMap = Record<string, number>
 type CheckoutContact = { name: string; phone: string; address: string; note: string }

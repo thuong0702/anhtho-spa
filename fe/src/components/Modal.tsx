@@ -1,5 +1,5 @@
 import { useEffect, type ReactNode } from 'react'
-import './Modal.css'
+import '../css/Modal.css'
 
 type ModalProps = {
   title: string

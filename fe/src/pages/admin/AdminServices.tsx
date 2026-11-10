@@ -1,8 +1,8 @@
 import { useMemo, useState, type FormEvent } from 'react'
-import { Icon } from '../components/Icon'
-import { Modal } from '../components/Modal'
-import './AdminDashboard.css'
-import './AdminServices.css'
+import { Icon } from '../../components/Icon'
+import { Modal } from '../../components/Modal'
+import '../../css/AdminDashboard.css'
+import '../../css/AdminServices.css'
 
 type ServiceStatus = 'Đang hoạt động' | 'Tạm ngừng'
 type ServiceCategory = 'Chăm sóc da' | 'Thư giãn' | 'Công nghệ cao'

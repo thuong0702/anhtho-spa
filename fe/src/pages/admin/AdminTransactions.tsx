@@ -1,8 +1,8 @@
 import { useMemo, useState, type FormEvent } from 'react'
-import { Icon } from '../components/Icon'
-import { products, type Product } from './Products'
-import './AdminDashboard.css'
-import './AdminTransactions.css'
+import { Icon } from '../../components/Icon'
+import { products, type Product } from '../user/Products'
+import '../../css/AdminDashboard.css'
+import '../../css/AdminTransactions.css'
 
 type Service = { id: string; name: string; category: string; duration: number; price: number; image: string }
 type Payment = 'Tiền mặt' | 'Chuyển khoản' | 'Thẻ ngân hàng' | 'Ví điện tử'

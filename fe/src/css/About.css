@@ -307,22 +307,33 @@
 
 @media (max-width: 760px) {
   .about-hero {
-    min-height: 480px;
+    min-height: max(500px, min(620px, 76svh));
   }
 
   .about-hero > img {
     width: 100%;
-    opacity: .36;
+    object-position: 68% center;
+    opacity: .52;
   }
 
   .about-hero::after {
-    background: linear-gradient(90deg, rgb(243 233 223 / 95%), rgb(243 233 223 / 74%));
+    background: linear-gradient(90deg, rgb(243 233 223 / 96%) 0%, rgb(243 233 223 / 87%) 48%, rgb(243 233 223 / 42%) 100%);
   }
 
   .about-hero-copy {
-    width: auto;
-    margin: 0;
-    padding: 48px 24px;
+    width: min(88%, 470px);
+    margin: 0 0 0 6px;
+    padding: 48px 18px;
+  }
+
+  .about-hero-copy h1 {
+    font-size: clamp(35px, 10vw, 52px);
+  }
+
+  .about-hero-description {
+    max-width: 360px;
+    font-size: 14px;
+    line-height: 1.65;
   }
 
   .about-story,
