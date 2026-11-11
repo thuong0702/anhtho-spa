@@ -18,7 +18,7 @@ const seedOrders: Order[] = [
   { id: 'DH00118', customer: 'Trần Thu Trang', phone: '0933 222 111', items: [{ name: 'Serum phục hồi da Anh Thơ Glow', quantity: 1, price: 680000, image: '/products/serum.svg' }], total: 680000, payment: 'COD', status: 'Chờ xác nhận', date: '07/11/2026 · 17:08', address: 'Quỳnh Lưu, Nghệ An' },
 ]
 const orderMenu = [
-  ['⌂', 'Tổng quan', '/admin'], ['♙', 'Quản lý người dùng', '/admin/users'], ['▧', 'Quản lý sản phẩm', '/admin/products'], ['❋', 'Quản lý dịch vụ', '/admin/services'], ['🛒', 'Quản lý đơn hàng', '/admin/orders'], ['calendar', 'Quản lý đặt lịch', '/admin/bookings'], ['◇', 'Quản lý khuyến mãi', '/admin/promotions'], ['▤', 'Quản lý kho', '/admin/inventory'], ['☆', 'Quản lý đánh giá', '/admin/reviews'], ['▣', 'Giao dịch tại cửa hàng', '/admin/transactions'],
+  ['⌂', 'Tổng quan', '/admin'], ['♙', 'Quản lý người dùng', '/admin/users'], ['▧', 'Quản lý sản phẩm', '/admin/products'], ['❋', 'Quản lý dịch vụ', '/admin/services'], ['▦', 'Quản lý danh mục', '/admin/categories'], ['🛒', 'Quản lý đơn hàng', '/admin/orders'], ['calendar', 'Quản lý đặt lịch', '/admin/bookings'], ['◇', 'Quản lý khuyến mãi', '/admin/promotions'], ['▤', 'Quản lý kho', '/admin/inventory'], ['☆', 'Quản lý đánh giá', '/admin/reviews'], ['▣', 'Giao dịch tại cửa hàng', '/admin/transactions'],
 ]
 function formatMoney(value: number) { return `${new Intl.NumberFormat('vi-VN').format(value)}đ` }
 

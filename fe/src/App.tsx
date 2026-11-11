@@ -15,7 +15,7 @@ import AdminTransactions from './pages/admin/AdminTransactions'
 import AdminServices from './pages/admin/AdminServices'
 import AdminOrders from './pages/admin/AdminOrders'
 import AdminBookings from './pages/admin/AdminBookings'
-import { AdminPromotions, AdminInventory, AdminReviews, AdminSettings } from './pages/admin/AdminExtra'
+import { AdminPromotions, AdminInventory, AdminReviews, AdminSettings, AdminCategories } from './pages/admin/AdminExtra'
 
 function App() {
   const path = window.location.pathname.replace(/\/$/, '')
@@ -36,6 +36,7 @@ function App() {
   if (path === '/admin/inventory') return <AdminInventory />
   if (path === '/admin/reviews') return <AdminReviews />
   if (path === '/admin/settings') return <AdminSettings />
+  if (path === '/admin/categories') return <AdminCategories />
   if (path === '/login') return <Login />
   if (path === '/register') return <Register />
   if (path === '/booking') return <Booking />
