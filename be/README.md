@@ -96,3 +96,54 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+# API nghiệp vụ hiện có
+
+BE dùng database `anhtho_spa` trong MySQL. Cấu hình trong `.env` dựa theo `.env.example`; schema được quản lý bằng `database/schema.sql`, TypeORM không tự sửa schema khi khởi động.
+
+Các endpoint hiện có:
+
+| Method | Endpoint | Quyền / tác dụng |
+| --- | --- | --- |
+| `GET` | `/categories?type=product` | Danh sách danh mục đang hoạt động; `type` có thể là `product` hoặc `service`. |
+| `POST` | `/categories` | Tạo danh mục, cần header `x-admin-api-key`. |
+| `GET` | `/products` | Danh sách sản phẩm đang bán. |
+| `POST`, `PUT` | `/products`, `/products/:id` | Thêm/cập nhật sản phẩm, cần header quản trị. |
+| `GET` | `/services` | Danh sách dịch vụ đang hoạt động. |
+| `POST`, `PUT` | `/services`, `/services/:id` | Thêm/cập nhật dịch vụ, cần header quản trị. |
+| `POST` | `/bookings` | Khách gửi yêu cầu đặt lịch. |
+| `GET` | `/bookings` | Danh sách lịch hẹn, cần header quản trị. |
+| `PATCH` | `/bookings/:id/status` | Đổi trạng thái lịch hẹn, cần header quản trị; body `{ "status": "confirmed" }`. |
+| `POST` | `/orders` | Tạo đơn online; server tự lấy giá và kiểm tra/trừ tồn kho. |
+| `POST` | `/orders/store` | Tạo giao dịch tại cửa hàng, cần header quản trị. |
+| `GET` | `/orders`, `/orders/:id` | Tra cứu đơn, cần header quản trị. |
+| `PATCH` | `/orders/:id/status` | Đổi trạng thái đơn, cần header quản trị. |
+
+Ví dụ tạo đơn online:
+
+```json
+{
+  "customerName": "Nguyễn Thị Lan",
+  "customerPhone": "0987654321",
+  "customerEmail": "lan@example.com",
+  "shippingAddress": "Nam Đàn, Nghệ An",
+  "paymentMethod": "cod",
+  "items": [{ "productId": 1, "quantity": 2 }]
+}
+```
+
+Ví dụ thêm sản phẩm:
+
+```json
+{
+  "categoryId": 1,
+  "sku": "SP001",
+  "name": "Serum phục hồi da",
+  "description": "Serum dưỡng ẩm",
+  "price": 680000,
+  "imageUrl": "/products/serum.svg",
+  "stockQuantity": 18
+}
+```
+
+Đặt `ADMIN_API_KEY` trong file `.env` bằng một chuỗi bí mật dài; gửi giá trị đó trong header `x-admin-api-key` khi gọi API quản trị. Đây là khóa bảo vệ tạm thời cho giai đoạn nối API, chưa thay thế đăng nhập JWT và phân quyền theo tài khoản nhân viên/quản trị viên.
+

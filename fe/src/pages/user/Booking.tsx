@@ -142,7 +142,7 @@ export default function Booking() {
             <label className="visually-hidden" htmlFor="booking-name">{en ? 'Full name' : 'Họ và tên'}</label>
             <input id="booking-name" name="name" placeholder={en ? 'Full name *' : 'Họ và tên *'} autoComplete="name" minLength={2} maxLength={120} required />
             <label className="visually-hidden" htmlFor="booking-phone">{en ? 'Phone number' : 'Số điện thoại'}</label>
-            <input id="booking-phone" name="phone" type="tel" placeholder={en ? 'Phone number *' : 'Số điện thoại *'} autoComplete="tel" pattern="[+0-9 ().-]{9,20}" required />
+            <input id="booking-phone" name="phone" type="tel" placeholder={en ? 'Phone number *' : 'Số điện thoại *'} autoComplete="tel" pattern="[-+0-9 ().]{9,20}" required />
             <button className="booking-page-submit" disabled={bookingState === 'sending'} type="submit">{bookingState === 'sending' ? (en ? 'Sending…' : 'Đang gửi…') : (en ? 'Book now' : 'Đặt lịch ngay')}</button>
             {message && <p className={`booking-page-message ${bookingState}`} role={bookingState === 'error' ? 'alert' : 'status'}>{message}</p>}
             <p className="booking-privacy"><span aria-hidden="true">♢</span>{en ? 'Your information is kept private and secure.' : 'Thông tin của bạn được bảo mật tuyệt đối.'}</p>

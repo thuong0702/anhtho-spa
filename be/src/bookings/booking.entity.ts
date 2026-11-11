@@ -3,12 +3,22 @@ import {
   CreateDateColumn,
   Entity,
   PrimaryGeneratedColumn,
+  UpdateDateColumn,
 } from 'typeorm';
 
 @Entity('bookings')
 export class Booking {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn({ type: 'bigint', unsigned: true })
   id: number;
+
+  @Column({ name: 'customer_id', type: 'bigint', unsigned: true, nullable: true })
+  customerId: number | null;
+
+  @Column({ name: 'service_id', type: 'bigint', unsigned: true, nullable: true })
+  serviceId: number | null;
+
+  @Column({ name: 'staff_id', type: 'bigint', unsigned: true, nullable: true })
+  staffId: number | null;
 
   @Column({ length: 120 })
   name: string;
@@ -27,4 +37,10 @@ export class Booking {
 
   @CreateDateColumn()
   createdAt: Date;
+
+  @Column({ type: 'text', nullable: true })
+  notes: string | null;
+
+  @UpdateDateColumn({ name: 'updated_at' })
+  updatedAt: Date;
 }

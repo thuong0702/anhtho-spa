@@ -27,7 +27,8 @@ export class CatalogService {
 
   listCategories(type?: string) {
     if (type && type !== 'product' && type !== 'service') throw new BadRequestException('Loại danh mục không hợp lệ.');
-    return this.categories.find({ where: { ...(type ? { type } : {}), isActive: true }, order: { name: 'ASC' } });
+    const categoryType = type as 'product' | 'service' | undefined;
+    return this.categories.find({ where: { ...(categoryType ? { type: categoryType } : {}), isActive: true }, order: { name: 'ASC' } });
   }
   async createCategory(input: CatalogInput) {
     const type = input.type;

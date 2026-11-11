@@ -454,7 +454,7 @@ function Home() {
             <label className="visually-hidden" htmlFor="booking-name">{content.name}</label>
             <input id="booking-name" name="name" placeholder={content.name} minLength={2} maxLength={120} autoComplete="name" required />
             <label className="visually-hidden" htmlFor="booking-phone">{content.phone}</label>
-            <input id="booking-phone" name="phone" type="tel" placeholder={content.phone} autoComplete="tel" pattern="[+0-9 ().-]{9,20}" title={language === 'vi' ? 'Nhập số điện thoại hợp lệ' : 'Enter a valid phone number'} required />
+            <input id="booking-phone" name="phone" type="tel" placeholder={content.phone} autoComplete="tel" pattern="[-+0-9 ().]{9,20}" title={language === 'vi' ? 'Nhập số điện thoại hợp lệ' : 'Enter a valid phone number'} required />
             <label className="visually-hidden" htmlFor="booking-service">{content.selectService}</label>
             <select id="booking-service" name="service" value={selectedService} onChange={(event) => setSelectedService(event.target.value)} required>
               <option value="" disabled>{content.selectService}</option>

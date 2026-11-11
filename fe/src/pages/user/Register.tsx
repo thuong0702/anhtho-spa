@@ -29,16 +29,39 @@ export default function Register() {
     return () => observer.disconnect()
   }, [])
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    const formData = new FormData(event.currentTarget)
+    const form = event.currentTarget
+    const formData = new FormData(form)
     if (formData.get('password') !== formData.get('confirmPassword')) {
       setNotice(en ? 'The passwords do not match.' : 'Mật khẩu xác nhận chưa khớp.')
       return
     }
-    setNotice(en
-      ? 'Account registration is not connected yet. Your information has not been sent.'
-      : 'Tính năng tạo tài khoản chưa được kết nối. Thông tin của bạn chưa được gửi đi.')
+    setNotice('')
+    const api = (import.meta.env.VITE_API_URL || 'http://localhost:3000').replace(/\/$/, '')
+    try {
+      const response = await fetch(`${api}/auth/register`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          phone: formData.get('phone'),
+          email: formData.get('email'),
+          password: formData.get('password'),
+        }),
+      })
+      const result = await response.json().catch(() => ({})) as { message?: string | string[] }
+      if (!response.ok) {
+        const message = Array.isArray(result.message) ? result.message[0] : result.message
+        setNotice(message || (en ? 'Could not create the account.' : 'Chưa thể tạo tài khoản. Vui lòng thử lại.'))
+        return
+      }
+      setNotice(en ? 'Account created successfully.' : 'Tạo tài khoản thành công.')
+      form.reset()
+      setAcceptedTerms(false)
+    } catch {
+      setNotice(en ? 'Cannot reach the server. Please try again.' : 'Không kết nối được máy chủ. Vui lòng thử lại.')
+    }
   }
 
   return (
@@ -66,7 +89,7 @@ export default function Register() {
             </label>
             <label className="login-input-wrap">
               <svg className="login-lock-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9 3l2 4.5-2 1.7a15 15 0 0 0 5.8 5.8l1.7-2 4.5 2-.5 2.4a3 3 0 0 1-3.3 2.4C10 19 5 14 4.2 6.8a3 3 0 0 1 2.4-3.3Z"/></svg>
-              <input name="phone" type="tel" autoComplete="tel" placeholder={en ? 'Phone number' : 'Số điện thoại'} pattern="[+0-9 ().-]{9,20}" required />
+              <input name="phone" type="tel" autoComplete="tel" placeholder={en ? 'Phone number' : 'Số điện thoại'} pattern="[-+0-9 ().]{9,20}" required />
             </label>
             <label className="login-input-wrap register-email">
               <svg className="login-lock-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>

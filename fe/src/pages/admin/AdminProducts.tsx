@@ -1,7 +1,7 @@
 import { useMemo, useState, type FormEvent } from 'react'
 import { Icon } from '../../components/Icon'
 import { Modal } from '../../components/Modal'
-import { products as shopProducts, type ProductCategory } from '../user/Products'
+import { products as shopProducts, type Product, type ProductCategory } from '../user/Products'
 import '../../css/AdminDashboard.css'
 import '../../css/AdminProducts.css'
 
