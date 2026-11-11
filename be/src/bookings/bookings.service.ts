@@ -1,4 +1,8 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import {
+  BadRequestException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Booking } from './booking.entity';
@@ -9,19 +13,6 @@ type CreateBookingInput = {
   service?: unknown;
   appointmentAt?: unknown;
 };
-
-const availableServices = new Set([
-  'Chăm sóc body',
-  'Massage mặt',
-  'Bấm huyệt',
-  'Chăm sóc da mụn',
-  'Gội đầu thư giãn',
-  'Body care',
-  'Facial massage',
-  'Acupressure',
-  'Acne care',
-  'Relaxing head spa',
-]);
 
 @Injectable()
 export class BookingsService {
@@ -46,7 +37,7 @@ export class BookingsService {
     if (!/^\+?[0-9 .()-]{9,20}$/.test(phone)) {
       throw new BadRequestException('Số điện thoại chưa hợp lệ.');
     }
-    if (!availableServices.has(service)) {
+    if (service.length < 2 || service.length > 120) {
       throw new BadRequestException('Vui lòng chọn dịch vụ cần đặt.');
     }
     if (
@@ -57,7 +48,16 @@ export class BookingsService {
     }
 
     const booking = await this.bookings.save(
-      this.bookings.create({ name, phone, service, appointmentAt }),
+      this.bookings.create({
+        name,
+        phone,
+        service,
+        appointmentAt,
+        customerId: null,
+        serviceId: null,
+        staffId: null,
+        notes: null,
+      }),
     );
 
     return {
@@ -65,5 +65,20 @@ export class BookingsService {
       status: booking.status,
       appointmentAt: booking.appointmentAt,
     };
+  }
+
+  list() {
+    return this.bookings.find({ order: { appointmentAt: 'DESC' } });
+  }
+
+  async updateStatus(id: number, status: string) {
+    const allowed = ['pending', 'confirmed', 'completed', 'cancelled'];
+    if (!allowed.includes(status)) {
+      throw new BadRequestException('Trạng thái lịch hẹn không hợp lệ.');
+    }
+    const booking = await this.bookings.findOneBy({ id });
+    if (!booking) throw new NotFoundException('Không tìm thấy lịch hẹn.');
+    booking.status = status;
+    return this.bookings.save(booking);
   }
 }

@@ -4,6 +4,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { BookingsModule } from './bookings/bookings.module';
+import { CatalogModule } from './catalog/catalog.module';
+import { OrdersModule } from './orders/orders.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -18,10 +21,15 @@ import { BookingsModule } from './bookings/bookings.module';
         password: config.get<string>('DB_PASSWORD', ''),
         database: config.get<string>('DB_NAME', 'anhtho_spa'),
         autoLoadEntities: true,
-        synchronize: config.get<string>('NODE_ENV') !== 'production',
+        // The schema is managed by be/database/schema.sql. Do not let TypeORM
+        // rewrite production data or drift from that schema at startup.
+        synchronize: false,
       }),
     }),
     BookingsModule,
+    CatalogModule,
+    OrdersModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
