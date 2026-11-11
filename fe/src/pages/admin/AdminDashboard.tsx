@@ -40,6 +40,7 @@ const menu = [
   { icon: '♙', label: 'Quản lý người dùng', href: '/admin/users' },
   { icon: '▧', label: 'Quản lý sản phẩm', href: '/admin/products' },
   { icon: '❋', label: 'Quản lý dịch vụ', href: '/admin/services' },
+  { icon: '▦', label: 'Quản lý danh mục', href: '/admin/categories' },
   { icon: '🛒', label: 'Quản lý đơn hàng', href: '/admin/orders' },
   { icon: 'calendar', label: 'Quản lý đặt lịch', href: '/admin/bookings' },
   { icon: '◇', label: 'Quản lý khuyến mãi', href: '/admin/promotions' },
